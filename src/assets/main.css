@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paid: 160 67% 52%;
+    --pending: 34 100% 50%;
+    --draft: 231 37% 63%;
+    --draft-dark: 231, 37%, 63%;
+    --draft-light: 228, 29%, 7%;
+    --modal-bg: #0d0f1780;
+  }
+  body {
+    @apply relative min-h-screen overflow-x-hidden bg-body-color font-spartan dark:bg-body-color-dark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-full px-[24px] py-[17px] font-semibold hover:bg-opacity-80;
+  }
+  .btn-status {
+    @apply;
+  }
+  .edit {
+    @apply bg-[#f9fafe] text-[#7e88c3] dark:bg-opacity-5 dark:text-[#DFE3FA];
+  }
+  .delete {
+    @apply bg-[#ec5757] text-[#fff];
+  }
+  .paid {
+    @apply bg-[#7c5dfa] text-[#fff];
+  }
+  .cancel {
+    @apply bg-[#F9FAFE] text-[#7E88C3] hover:bg-slate-200 dark:bg-opacity-5 dark:text-white;
+  }
+  .draft {
+    @apply bg-[#373B53] text-[#888EB0] hover:bg-[#0C0E16];
+  }
+}
+
+@layer utilities {
+  .invalidBorder {
+    @apply border border-red-500 outline-none focus:border-red-500 dark:border-red-500 dark:focus:border-red-500;
+  }
+  .validBorder {
+    @apply border border-transparent border-moon-color outline-none dark:border-transparent;
+  }
+  .green-text {
+    @apply text-paid-text;
+  }
+  .orange-text {
+    @apply text-pending-text;
+  }
+  .gray-text {
+    @apply text-draft-text dark:text-draft-dark;
+  }
+
+  .paid-bg {
+    @apply bg-paid-bg;
+  }
+  .pending-bg {
+    @apply bg-pending-bg;
+  }
+  .draft-bg {
+    @apply bg-draft-bg;
+  }
+
+  .dot-paid {
+    @apply bg-paid-text;
+  }
+  .dot-pending {
+    @apply bg-pending-text;
+  }
+  .dot-draft {
+    @apply bg-draft-text dark:bg-draft-dark;
+  }
+  .calc-height {
+    height: calc(100vh - 210px);
+  }
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-image: url("./icons/icon-calendar.svg");
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("./icons/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 20px;
+  border-radius: 2px;
+  padding-right: 2rem;
+}
