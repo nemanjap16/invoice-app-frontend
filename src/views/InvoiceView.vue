@@ -317,7 +317,7 @@ import TheModal from "../components/TheModal.vue";
 import TheNavbar from "../components/TheNavbar.vue";
 import { useInvoiceStore } from "../stores/invoice";
 import { formatDate } from "../utilities/FormatDate";
-import { formatCurrency } from "../utilities/FormatNumber";
+import { formatCurrency } from "../utilities/formatNumber";
 
 let router = useRouter();
 let route = useRoute();
