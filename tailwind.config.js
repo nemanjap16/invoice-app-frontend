@@ -70,7 +70,7 @@ module.exports = {
             backgroundColor: "#7C5DFA",
           },
           "&::after": {
-            content: `url('./src/assets/icons/icon-check.svg')`,
+            content: `url('/icon-check.svg')`,
             display: "block",
             position: "absolute",
             top: "-3px",
