@@ -1,4 +1,6 @@
 # Invoice app - Vue 3
+### Click for - [Live preview](https://roaring-liger-33bdc8.netlify.app)
+#
 
 ![Design preview for the Invoice app coding challenge](./preview.jpg)
 
